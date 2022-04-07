@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria Mictlán - Administración</title> 
+</head>
+<body>
+    <header class=" header">
+        <h1>Pasteleria Mictlán <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Pasteleria.html"><img class="center" src ="C:\Users\Jorge\OneDrive\Escritorio\FrontEnd Intro\HTML\Front-Practica\Recursos\Mictlán.png" alt="Pastel0" width="100px" height="100px"><br></a></h1>
+    </header>
+    
+    <h2>Administración</h2>  
+    <h3>Menu</h3>
+     <!--Menu-->
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Pasteleria.html" target="blank">Incio</a>
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Nuestra%20Historial.html" target="blank">Nuestra historia</a>
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Pasteles.html" target="blank">Pasteles</a>
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Pedidos.html" target="blank">Pedidos</a>
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Sucursal.html" target="blank">Sucursales</a>
+    <br>
+    <div class="col-3">
+        
+        <br>
+        <form onsubmit="enviaFormulario(); return false;" id="forma" method="post">
+          <table>
+            <tr>
+              <th colspan="2">Inventario</th>
+            </tr>                  
+            <tr>
+              <th>Elemento</th>
+              <th>Cantidad</th>
+            </tr>
+            <tr>
+              <td>
+                Leche
+              </td>
+              <td>
+                <input type="number" id="leche" name="leche" value= "400" class="inputform rigth"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Harina
+              </td>
+              <td>
+                <input type="number" id="harina" name="harina" value= "300" class="inputform rigth"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Chocolate
+              </td>
+              <td>
+                <input type="number" id="chocolate" name="chocolate" value= "200" class="inputform rigth"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Fresa
+              </td>
+              <td>
+                <input type="number" id="fresa" name="fresa" value= "100" class="inputform rigth"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Azúcar
+              </td>
+              <td>
+                <input type="number" id="azucar" name="azucar" value= "120" class="inputform rigth"/>
+              </td>
+            </tr>                                    
+            <tr>
+              <td><input type="reset"></td>
+              <td><input type="submit" value="Submit"></td>
+            </tr>
+          </table>
+        </form>              
+      </div>
+
+      <div class="col-8">
+        <table class="ordenes">
+          <tr>
+            <th colspan="8">Pedidos</th>
+          </tr>                  
+          <tr>
+            <th>No. Orden</th>
+            <th>Solicitud</th>
+            <th>estado</th>
+            <th>Fecha</th>
+          </tr>
+          <tr>
+            <td>
+              RV8978510
+            </td>
+            <td>
+              Red Velvet - M
+            </td>
+            <td>
+              En Proceso
+            </td>
+            <td>
+              21/MAR/22
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CP5678257
+            </td>
+            <td>
+              ChocoParty - S
+            </td>
+            <td>
+              En Proceso
+            </td>
+            <td>
+              15/MAR/22
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CF8956347
+            </td>
+            <td>
+              Choco Ferrero - M
+            </td>
+            <td>
+              En Proceso
+            </td>
+            <td>
+              09/MAR/22
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CI8945236
+            </td>
+            <td>
+              Choco Ice - S
+            </td>
+            <td>
+              Pendiente
+            </td>
+            <td>
+              06/MAR/22
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CWF78945
+            </td>
+            <td>
+              Coraline World of Flavors - XB
+            </td>
+            <td>
+              Cancelado
+            </td>
+            <td>
+              19/MAR/22
+            </td>
+          </tr>
+          <tr>
+            <td>
+              PP7856120
+            </td>
+            <td>
+              Purple Party - B
+            </td>
+            <td>
+              Pendiente
+            </td>
+            <td>
+              23/MAR/22
+            </td>
+          </tr> 
+          <tr>
+            <td>
+              RD1231212
+            </td>
+            <td>
+              Red Velvet - M
+            </td>
+            <td>
+              Pendiente
+            </td>
+            <td>
+              21/MAR/22
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CWF895743
+            </td>
+            <td>
+                Coraline World of Flavors - M
+            </td>
+            <td>
+              Pendiente
+            </td>
+            <td>
+              31/MAR/22
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CI89452378
+            </td>
+            <td>
+              Choco Ice - S
+            </td>
+            <td>
+              Pendiente
+            </td>
+            <td>
+              31/MAR/22
+            </td>
+          </tr>
+        </table>
+      </div>
+</main>
+<br>
+<footer>
+    © Copyright 2022. Las imagenes utilizadas son utilizadas con fines recreativos, todos los derechos son reservados a los autores originales
+    </footer>
+</p>   
+</body>
+</html
