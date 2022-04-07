@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html len = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria Mictlán - Pedidos</title>
+    <h1>Pasteleria Mictlán <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Pasteleria.html"><img class="center" src ="C:\Users\Jorge\OneDrive\Escritorio\FrontEnd Intro\HTML\Front-Practica\Recursos\Mictlán.png" alt="Pastel0" width="100px" height="100px"><br></a><br>Pedidos</h1>
+</head>
+<body>
+    <!--Formulario-->
+    <h3>Menu</h3>
+    <!--Menu-->
+    <a href="index.html"></a>
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Pasteleria.html" target="blank">Incio</a>
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Nuestra%20Historial.html" target="blank">Nuestra historia</a>
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Pasteles.html" target="blank">Pasteles</a>
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Pedidos.html" target="blank">Pedidos</a>
+    <a href="file:///C:/Users/Jorge/OneDrive/Escritorio/FrontEnd-Mision-Training-main/Pr%C3%A1ctica%201/Sucursal.html" target="blank">Sucursales</a>
+   <main>
+      <label for="Titulo"><h2>🧁 Elige tu preferido, ordena a tu gusto 🧁</h2></label> 
+    <table>
+        <div class="elem-group">
+        <tr>
+            <label for="Ped"><th>Tu Pedido</th></label>
+        </tr>
+        </div>
+        <tr>
+            <th>Selecciona el pastel que deseas</th>
+        </tr>
+        <tr>
+            <td> 
+                <!--Lista de Pasteles a Elegir-->
+                <select id="pastel"  class="inputform">
+                <option value="none" id="">Selecciona una opción por favor</option>
+                <optgroup label="Pasteles" id="">
+                <option value="Red Velvet - Strawberry">Red Velvet - Strawberry..........$350</option>
+                <option value="Choco Ice - Choco and M&M's">Choco Ice - Choco and M&M's...........$550</option>
+                <option value="Purple Party - Strawberry">Purple Party - Blueberry........$250</option>
+                <option value="Choco Party.">Choco Party.........$650</option>
+                <option value="Choco Ferrero">Choco Ferrero.......$250</option>
+                <option value="Coraline a World of Flavors">Coraline a World of Flavors.....$500</option>
+                </optgroup>
+                </select>
+            </td>
+        </tr>
+        </div>  
+        <tr>
+            <th>¿Para cuantas de personas sera su pastel? </th>
+        </tr>
+        <tr>
+            <td> 
+                <!--Lista de Pasteles a Elegir-->
+                <select id="Personas"  class="inputform">
+                <option value="none" id="">Selecciona una opción por favor</option>
+                <optgroup label="Personas" id="">
+                <option value="15">Para 15 personas...$100 - Extra</option>
+                <option value="20">Para 20 personas...$200 - Extra</option>
+                <option value="30">Para 30 personas...$300 - Extra</option>
+                </optgroup>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <!--Fecha de Entrega-->
+            <th> Selecciona el dia de entrega.</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="datetime-local" id="F.Entrega" name="F.Entrega" class="inputform">
+            </td>
+        </tr>
+        <tr>
+             <!--Adornos-->
+             <th> Adornos para tu pastel</th>
+             <tr>
+                <td colspan="2">
+                    <!--Lista de Adornos a Elegir-->
+                    <select id="Adornos"  class="inputform">
+                    <option value="none" id="">Selecciona una opción por favor</option>
+                    <optgroup label="Adornos" id="">
+                    <option value="Letrero">Letrero..........$50</option>
+                    <option value="Velas de numeros">Velas de Numeros...........$100</option>
+                    <option value="Figuras de fondant">Figuras de Fondant........$200</option>
+                    <option value="Trozos de Frutas">Trozos de Frutas.......$150</option>
+                    <option value="Vela Cohete">Vela Cohete.....$200</option>
+                    </optgroup>
+                    </select>
+                </td>
+            </tr>                   
+        </tr>
+        <tr>
+            <!--EXTRAS-->
+            <th>!EXTRAS¡</th>
+        </tr>
+        <tr>
+            <!--Sabores adicionales-->
+            <th> Tenemos mas Sabores. !Puedes combinar¡ ¿Te gustaria agregar alguno?</th>
+            <tr>
+                <td colspan="2">
+                    <!--Lista de Sabores a Elegir-->
+                    <select id="Sabores"  class="inputform">
+                    <option value="none" id="">Selecciona una opción por favor</option>
+                    <optgroup label="Sabores" id="">
+                    <option value="Zarzamora">Zarzamora..........$250</option>
+                    <option value="Vainilla">Vainilla...........$350</option>
+                    <option value="Chocolate Crunch">Chocolate Crunch........$550</option>
+                    <option value="Chocolate Kit Kat">Chocolate derretido.......$550</option>
+                    <option value="Fresa">Fresa.....$500</option>
+                    <option value="Ninguno">Ninguno</option>
+                    </optgroup>
+                    </select>
+                </td>
+                <tr>
+                    <!--Adornos Extra-->
+                    <th>¿Quieres más adornos? Sin problema! Agregalo</th>
+                    <tr>
+                       <td colspan="2">
+                           <!--Lista de Adornos a Elegir-->
+                           <select id="AdornosExtra"  class="inputform">
+                            <option value="none" id="">Selecciona una opción por favor</option>
+                            <optgroup label="Adornos Extra" id="">
+                            <option value="Letrero">Letrero..........$50</option>
+                            <option value="Velas de numeros">Velas de Numeros...........$100</option>
+                            <option value="Figuras de fondant">Figuras de Fondant........$200</option>
+                            <option value="Trozos de Frutas">Trozos de Frutas.......$150</option>
+                            <option value="Vela Cohete">Vela Cohete.....$200</option>
+                            </optgroup>
+                           </select>
+                       </td>
+                   </tr>
+            
+                    
+            </tr>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+        <tr>
+           <td><input type="text" id="name" name="Client_name" placeholder="Nombre Completo" class="inputform"></td>
+        </tr>
+        <tr>
+            <th>Numero de Contacto</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="number" name="Client_number" placeholder="Maximo 10 digitos" class="inputform"></td>
+        </tr>
+        <tr>
+            <th>Correo Electronico</th>
+        </tr>
+        <tr>
+          <td><input type="email" id="Correo" name="Correo" placeholder="Ingresa tu correo" class="inputform"></td>
+        </tr>
+    </form></table>
+    <input type="submit">
+    <footer>
+    © Copyright 2022. Las imagenes utilizadas son utilizadas con fines recreativos, todos los derechos son reservados a los autores originales
+    </footer>
+   </main>  
+</body>
+</html>
