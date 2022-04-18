@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacunacion - Mexolotl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+     
+</head>
+<body>
+    <!--DISEÑO DE LA PAGINA-->
+    <style>
+        :root{
+            --color-bg: #fff;
+            --color-primary: #084bc3;
+            --color-secondary: #09416a;
+            --color-tertiary: #617286;
+            --button-primary: #2854cc;
+            --button-secondary: #f1f5ff;
+            --box-shadow: 0 0 12px rgba(0,0,0, .2);
+         }   
+        *{
+  
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #fff;
+            font-family: 'Lato', sans-serif;
+        }
+        /* Barra de Navegacion*/
+        .Menu{
+            height: 70px;
+            background: #ffffffc5;
+            position: absolute;
+            width: 100vw;
+        }
+        .Menu-contenido{
+            width: 70px;
+            height: 100%;
+            max-width: 1100px;
+            min-width: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .Menu-contenido-contenido{
+            color: var(--color-primary);
+            font-weight: bolder;
+        }
+        .MenuBot{
+            display: inline-block;
+            background: var(--button-primary);
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: 5px;
+        }
+        .MenuOp{
+            text-decoration: none ;
+            color: rgb(95, 93, 93);
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 60px;  
+        }
+
+        .contenido{
+           width: 90%;
+           max-width: 1200px;
+           overflow: hidden;
+           margin: 0 auto;
+        }
+       .contenido--pad{
+           margin-top: 100px;
+        }
+
+        /*Doc-Menú*/
+        .Vac{
+            height: 100vh;
+        }
+        .doc-menu{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap-reverse;
+        }
+        .Doc_img{
+            width: 50%;
+            margin: 0;
+        }
+        .Doc_picture{
+            width: 100%;
+            max-height: 100%;
+        }
+
+        .doc-texts{
+            width: 45%;
+            color: rgb(24, 44, 226);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .doc-title{
+            padding-top: 200px;
+            font-size: 4rem;
+            padding-bottom: 20px;
+            color: var(--color-secondary);
+        }
+
+        .doc-Des{
+            font-size: 1rem;
+            font-weight: 300px;
+            color:var(--color-tertiary)
+        }
+        
+        .doc-Reco{
+            font-size: 1rem;
+            padding: 20px 0;
+        }
+
+        .doc-calendario{
+            font-size: 1.5rem;
+            padding: 100px 0;
+            font-weight: 300px ;
+        }
+
+        /*Location*/
+        .Ubicacion{
+         width: 60%;
+         height: 100px;
+         margin: 20px auto;
+         border: 1px solid black;
+         border-radius: 10px;
+         position: absolute;
+         bottom: 40px;
+         left: 150px;
+         border: 1px solid lightgray;
+         background: #fff;
+         box-shadow: var(--box-shadow);
+         border-radius: 10px;
+         display: flex;
+        }
+
+        .ub-it{
+           padding: 10px 40px;
+        }
+
+        .ub-tit{
+            font-size: 20px;
+            color: #788393
+        }
+
+        .ub-txt{
+            font-size: 20px;
+            color: #29416b;
+        }
+        .SubBotton{
+            display: inline-block;
+            width: 100px;
+            height: 50%;
+            background: var(--button-primary);
+            color: #fff;
+            margin-top: 20px;
+            margin-left: 20px;
+            text-decoration:none;
+            padding: 16px 0px ;
+            text-align: center;
+            border-radius: 100px;
+        }
+        /*Caratulas*/
+        .Caratulas-WSV{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .Caratulas-Minimize{
+            width: 230px;
+            height: 250px;
+            margin-bottom: 100px;
+            border: 1px solid lightgray;
+            background: #fff;
+            box-shadow: var(--box-shadow);
+            border-radius:  15px; 
+            padding: 10px 20px;
+            overflow: hidden;
+            text-align: justify;
+        }
+        .Caratulas-Ttl{
+            color: #2854cc;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .Caratulas-Prf{
+            color: darkgray;
+            font-size: 1rem;
+            font-weight: 100;
+        }
+        /*Sections*/
+        .section__main{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section__img{
+            width: 50%;
+            margin: 0;
+        }
+
+        .section__picture{
+            width: 100%;
+            max-height: 100%;    
+        }
+
+        .section__texts{
+            width: 45%;
+            color: rgb(36, 49, 173);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .section__title{
+            padding-top: 90px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding-bottom: 20px;
+            color: var(--color-secondary)
+        }
+
+
+        .section__copy--np{
+            font-size: 1rem;
+            font-weight: 300px;
+            color: var(--color-tertiary)
+        }
+
+        .section__copy{
+            font-size: 1rem;
+            font-weight: 300px;
+            padding: 20px 0;
+            color: var(--color-tertiary)
+        }
+
+        .section__copy__text{
+            color: var(--color-tertiary);
+        }
+
+        /* Contact Box */
+        .section__contacts{
+            display: flex;
+            flex-direction: column;
+        }
+        .section__contacts__par{
+            display: flex;
+            margin-top: 30px;
+        }
+        .section__contacts__box{
+            display: flex;
+            border: 1px solid lightgray;
+            background: #fff;
+            box-shadow: var(--box-shadow);
+            flex-direction: column; 
+            align-items: center;
+            padding: 10px 10px;
+            margin-right: 30px;
+        }
+        .section__contacts__box__text{
+            display: flex;
+        }
+
+        .section__contacts__box__title{
+            color: var(--color-secondary)
+        }
+
+        .conact_button{
+            display: inline-block;
+            width: 175px;
+            margin: 0 auto;
+            text-align:center;
+            background: var(--button-secondary);
+            color: #2965cd;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: 10px;
+        }
+        /*Acerca de*/
+        .Contenido-pad-acerca-de{
+            background-color: var(--button-secondary);
+            width: 100%;
+            height: 280px;
+            border: 1px solid lightgray;
+            box-shadow: var(--box-shadow);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        .Acerca-de-Block{
+            display: flex;
+            justify-content: space-between;
+        }
+        .Acerca-de-Block2{
+            display: flex;
+            justify-content: space-between;
+        }
+        .Acerca_v1_Titulo{
+            font-size: 1.5rem;
+            color: rgb(0,0,0);
+            font-weight: bolder;
+        }
+        .Acerca_v2_title{
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+            font-weight:bolder;
+        }
+        .Acerca_v1_Texto, .Acerca_v2_Texto{
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            padding-top: 20px;
+        }
+        .Acerca_v1{
+            width: 30%;
+            margin-top: 50px;
+            margin-left: 100px;
+            margin-right: 100px;
+            padding-right: 100px;
+        }
+        .Acerca_v2{
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+            margin-top: 50px;
+            padding-right: 100px;
+        }
+        .about__v1_text--sp{
+            margin: 20px 20px;
+            padding: 20px 20px;
+        }
+        /* Idk */
+        @media screen and (max-width:800px){
+        }
+
+        @media screen and (max-width:500px){
+        }
+       
+      
+    </style>
+    <!--CONTENIDO-->
+    <header class="Vac">
+        <nav class="Menu">
+            <div class="Menu-contenido">
+                <div class="Menu-contenido-titule">
+                    <h1 class="title">Vaccination</h1>
+                </div>
+                <div class="Menu-contenido-contenido">
+                    <a href="#" class="MenuOp">Database</a>
+                    <a href="#" class="MenuOp">Education</a>
+                    <a href="#" class="MenuOp">News</a>
+                    <a href="#" class="MenuOp">Regulation</a>
+                    <a href="#" class="MenuBot">Hoax Buster</a>
+                </div>
+            </div>
+        </nav>    
+    <section class="doc-menu container">
+        <div class="doc-texts">
+            <h1 class="doc-title"> Fight Virus<br>With<br> Vaccines</h1>
+            <h2 class="doc-Des">Let's stop this pandemic by killing the virus with a vaccine, don't let yourselft and your family get infected </h2>
+            <h2 class="doc-Reco"><img src=".\Requerimientos\shield.jpg" width="30" height="30"> Best protecction <img src=".\Requerimientos\star.jpg" width="30" height="30"> Selected Vaccines</h2>
+            <h2 class="doc-calendario">Schedule your vaccinations</h2>    
+        </div>
+        <figure class="Doc_img">
+           <img src="C:\Users\Jorge\OneDrive\Escritorio\FE Practicas\CSS\Requerimientos\Doc.png" class="Doc_picture">
+        </figure>
+    </section>    
+        <div class="Ubicacion">
+            <div class="ub-it">
+                <img src=".\Requerimientos\location.jpg" width="30" height="30">
+                <div class="ub-tit" >Location</div>
+                <div class="ub-txt">Jakarta Utara</div>
+            </div>
+            <div class="ub-it">
+                <img src=".\Requerimientos\Scedul.jpg" width="30" height="30">
+                <div class="ub-tit">Date</div>
+                <div class="ub-txt">08 July 2021</div>
+            </div>
+            <div class="ub-it">
+                <img src=".\Requerimientos\type.jpg" width="30" height="28">
+                <div class="ub-tit">Vaccine Type</div>
+                <div class="ub-txt">Moderna</div>
+            </div>
+            <div>
+             <a class="SubBotton" href="#">Submit</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <main class="main">
+        <section class="section__main container">
+            <figure>
+                <img src="C:\Users\Jorge\OneDrive\Escritorio\FE Practicas\CSS\Requerimientos\Vacunas.png" class="Vacunas_picture" alt="Tipos de vacunas"><br>
+            </figure>
+            <div class="section_texts">
+                <h1 class="section__title">Why should I Vaccine?</h1>
+                <h2 class="section__copy--np">In order to avoid any doubs about getting the COVID-19<br>
+                <h2 class="section__copy--np">identify the following the benefits of COVID-19></h2>
+                <h2 class="section__copy--np">vaccination:</h2>
+            </div>
+            <div class="Caratulas-WSV">
+                <div class="Caratulas-Minimize"> 
+                    <figure>
+                        <!--Imagen Falante-->
+                        <img src=".\Requerimientos\b1.png">
+                    </figure>
+                    <h2 class="Caratulas-Ttl"> Minimize the <br> spread viruses</h2> <br>
+                    <p class="Caratulas-Prf">Vaccine has been proven effective to  prevent someone from  getting infected with coronavirus</p> 
+                </div>      
+                <div class="Caratulas-Minimize">
+                    <figure>
+                        <!--Imagen Falante-->
+                        <img src=".\Requerimientos\sec.png">
+                    </figure>
+                    <h2 class="Caratulas-Ttl"> Forming <br> antibodies</h2> <br>
+                    <p class="Caratulas-Prf">COVID-19 vaccine proven to help shape antibody response for inmune system </p> 
+                </div>
+                <div class="Caratulas-Minimize">
+                    <figure>
+                        <!--Imagen Falante-->
+                        <img src=".\Requerimientos\group.png">
+                    </figure>
+                    <h2 class="Caratulas-Ttl"> Protecting <br> people nearby</h2> <br>
+                    <p class="Caratulas-Prf">Vaccine has been COVID-19 vaccination  are the vaccine that we  get can also help protect people around us</p> 
+                </div>
+                <div class="Caratulas-Minimize">
+                    <figure>
+                        <!--Imagen Falante-->
+                        <img src=".\Requerimientos\trend.png">
+                    </figure>
+                    <h2 class="Caratulas-Ttl"> Creating group <br> immunity</h2> <br>
+                    <p class="Caratulas-Prf">COVID-19 vaccination is also beneficial for creating group  inmunity or heard  immunity</p> 
+                </div>
+            </div>
+        </section>
+        <!--Preparations Before Vaccine-->
+        <section class="doc-menu container">
+            <figure class="Doc_img">
+                <img src=".\Requerimientos\CMth.png" class="Doc_picture">
+            </figure>
+            <div class="section_texts">  
+                <h1 class="section__title">Preparations Before Vaccine</h1>
+                <h2 class="section__copy">the success of vaccines is strongly influenced by the streng of the body's immune system. Therefore, there are several things that can be tried to make the COVID-19 vaccine work:</h2>
+                <h2 class="section__copy">•Avoid alcoholic beverages</h2>
+                <h2 class="section__copy">•Avoid stress</h2>
+                <p class="section__copy_text">Stress has a profound effect on immune work.</p>
+                <h2 class="section__copy">•Eat healthy food</h2>
+                <h2 class="section__copy">•Get enough sleep</h2>
+                <h2 class="section__copy">•Excercise or physical activity</h2>
+            </div>
+        <!--Emergency Contact-->  
+        <section class="doc-menu container container--pad">
+        <div class="section_texts">
+            <h1 class="section__title">Emergency Contact</h1>
+            <h2 class="section__copy">Contact one of the contacts bellow if you or your family feel unwell and have similar symptoms such as Covid-19, make sure you also take care of yourself before reporting to us:</h2>
+            <div class="section__contacts">
+                <div class="section__contacts__par">
+                    <div class="section__contacts__box">   
+                            <figure>
+                            <!--Imagen Faltante-->
+                                <img src=".\Requerimientos\Phone.png" alt="Telefono"  width="70%">
+                            </figure>
+                            <div class="section__contacts__number">
+                            <h2 class="section__contacts__box__title">Call</h2>
+                            <p class="section__copy__text">021.123.145.14</p>
+                    </div>  
+                    <a href="#" class="conact_button">Call Now</a>
+                    </div>
+                    <div class="section__contacts__box">
+                    <div class="section__contacts__box__text">
+                        <figure>
+                            <img src=".\Requerimientos\Chat.png" alt="Chat" width="70%"> 
+                        </figure>
+                        <div class="section__contacts__number">
+                            <h2 class="section__contacts__box__title">Chat</h2>
+                            <p class="section__copy__text">021.123.145.14</p>
+                        </div>
+                    </div>
+                    <a href="#" class="conact_button conact_button--active">Chat Now</a>
+                </div>
+                <div class="section__contacts__par">
+                    <div class="section__contacts__box">
+                        <div class="section__contacts__box__text">
+                            <figure>
+                                <img src=".\Requerimientos\Video.png" alt="Video Call"  width="70%"> 
+                            </figure>
+                            <div class="section__contacts__number">
+                            <h2 class="section__contacts__box__title">Video Call</h2>
+                            <p class="section__copy__text">021.123.145.14</p>
+                        </div>
+                    </div>
+                    <a href="#" class="conact_button">Video Call Now</a>
+                </div>
+                <div class="section__contacts__box">
+                    <div class="section__contacts__box__text">
+                        <figure>
+                            <img src=".\Requerimientos\Mssg.png"  width="30" height="30" alt="Message" > 
+                        </figure>
+                        <div class="section__contacts__number">
+                        <h2 class="section__contacts__box__title">Message</h2>
+                        <p class="section__copy__text">021.123.145.14</p>
+                        </div>
+                    </div>
+                    <a href="#" class="conact_button">Message Now</a>
+                </div>
+            </div>
+        </div>
+        <figure class="Doc_img">
+            <img src=".\Requerimientos\DocC.png" class="Doc_picture" >
+        </figure>
+        </section>
+    </main>      
+    <!--Footer-->
+    <footer class="Contenido-pad-acerca-de">
+        <div class="Acerca-de-Block">
+            <div class="Acerca_v1">
+               <h2 class="Acerca_v1_title">Vaccination</h2> 
+               <p class="Acerca_v1_Texto">Our goal is to help the world free from the ongoing pandemic</p>
+            </div>
+        </div>
+        <div class="Acerca_v2">
+            <div class="Acerca_v2G">
+                <h2 class="Acerca_v2_title">About</h2>
+                <p class="Acerca_v2_Texto">About Us</p>
+                <p class="Acerca_v2_Texto">Features</p>
+                <p class="Acerca_v2_Texto">News & Blog</p>
+            </div>     
+            <div class="Acerca_v2G">
+                <h2 class="Acerca_v2_title">Company</h2>
+                <p class="Acerca_v2_Texto">How we work?</p>
+                <p class="Acerca_v2_Texto">Capital</p>
+                <p class="Acerca_v2_Texto">Security</p>
+            </div>   
+            <div class="Acerca_v2G">
+                <h2 class="Acerca_v2_title">Support</h2>
+                <p class="Acerca_v2_Texto">FAQs</p>
+                <p class="Acerca_v2_Texto">Support Center</p>
+                <p class="Acerca_v2_Texto">Contact Us</p>
+            </div>     
+        </div>
+    <div class="Acerca-de-Block2">
+        <p class="Pie_Acercatxt1">@2022 Vaccination. All rights reserved</p>        
+        <p class="Pie_Acercatxt1">Terms & Agreements    Privacy Policy</p>
+    </div>
+</body>
+</html>
